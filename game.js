@@ -137,7 +137,7 @@ function endGame() {
   clearInterval(gameTimer);
   startBtn.innerHTML = '<span aria-hidden="true">&gt;</span>\u518d\u6765';
   setStatus("\u6e38\u620f\u7ed3\u675f");
-  setOverlay("\u4f60\u8f93\u4e86", "\u70b9\u51fb\u91cd\u5f00\uff0c\u6216\u8005\u6309\u7a7a\u683c\u518d\u6765\u4e00\u5c40", false);
+  setOverlay("\u4f60\u8f93\u4e86", "\u70b9\u51fb\u91cd\u5f00\u6309\u94ae\u4ee5\u5f00\u59cb\u65b0\u7684\u4e00\u5c40", false);
   draw();
 }
 
