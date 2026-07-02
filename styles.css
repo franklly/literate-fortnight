@@ -101,7 +101,7 @@ h1 {
   position: relative;
   width: min(100%, 560px);
   aspect-ratio: 1;
-  margin: 18px auto;
+  margin: 18px auto 12px;
   touch-action: none;
 }
 
@@ -189,24 +189,77 @@ select {
 }
 
 .touch-pad {
-  width: min(260px, 90%);
-  margin: 18px auto 0;
+  width: 202px;
+  height: 202px;
+  margin: 4px auto 14px;
   display: none;
-  grid-template-columns: repeat(3, 64px);
-  grid-template-rows: repeat(2, 54px);
+  grid-template-columns: repeat(3, 62px);
+  grid-template-rows: repeat(3, 62px);
   justify-content: center;
+  align-content: center;
   gap: 8px;
+  border: 1px solid rgba(124, 201, 255, 0.18);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(124, 201, 255, 0.13), transparent 62%),
+    linear-gradient(145deg, #292f36, #171b20);
+  box-shadow:
+    inset 0 2px 9px rgba(255, 255, 255, 0.06),
+    inset 0 -8px 18px rgba(0, 0, 0, 0.28),
+    0 14px 34px rgba(0, 0, 0, 0.25);
+  touch-action: none;
+}
+
+.touch-pad::before {
+  content: "";
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #12161b;
+  box-shadow:
+    inset 0 2px 5px rgba(255, 255, 255, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .touch-pad button {
-  width: 64px;
-  min-height: 54px;
+  width: 62px;
+  min-height: 62px;
   padding: 0;
+  border-color: #101418;
+  border-radius: 12px;
+  background:
+    linear-gradient(145deg, #3a434c, #20262d);
+  box-shadow:
+    inset 0 2px 3px rgba(255, 255, 255, 0.11),
+    inset 0 -5px 8px rgba(0, 0, 0, 0.3),
+    0 7px 0 #0f1318,
+    0 12px 18px rgba(0, 0, 0, 0.25);
   touch-action: manipulation;
+}
+
+.touch-pad button:active {
+  transform: translateY(5px);
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.34),
+    0 2px 0 #0f1318,
+    0 7px 12px rgba(0, 0, 0, 0.2);
+}
+
+.touch-pad button span {
+  width: 0;
+  height: 0;
+  display: block;
+  border-style: solid;
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.35));
 }
 
 .touch-pad [data-dir="up"] {
   grid-column: 2;
+  grid-row: 1;
 }
 
 .touch-pad [data-dir="left"] {
@@ -222,6 +275,26 @@ select {
 .touch-pad [data-dir="right"] {
   grid-column: 3;
   grid-row: 2;
+}
+
+.touch-pad [data-dir="up"] span {
+  border-width: 0 11px 16px 11px;
+  border-color: transparent transparent var(--focus) transparent;
+}
+
+.touch-pad [data-dir="down"] span {
+  border-width: 16px 11px 0 11px;
+  border-color: var(--focus) transparent transparent transparent;
+}
+
+.touch-pad [data-dir="left"] span {
+  border-width: 11px 16px 11px 0;
+  border-color: transparent var(--focus) transparent transparent;
+}
+
+.touch-pad [data-dir="right"] span {
+  border-width: 11px 0 11px 16px;
+  border-color: transparent transparent transparent var(--focus);
 }
 
 @media (max-width: 620px) {
