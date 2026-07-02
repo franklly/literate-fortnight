@@ -200,11 +200,11 @@ select {
   height: 188px;
   margin: 2px auto 0;
   display: none;
-  grid-template-columns: repeat(3, 56px);
-  grid-template-rows: repeat(3, 56px);
+  grid-template-columns: repeat(3, 52px);
+  grid-template-rows: repeat(3, 52px);
   justify-content: center;
   align-content: center;
-  gap: 8px;
+  gap: 10px;
   border: 1px solid rgba(124, 201, 255, 0.18);
   border-radius: 50%;
   background:
@@ -233,8 +233,8 @@ select {
 }
 
 .touch-pad button {
-  width: 56px;
-  min-height: 56px;
+  width: 52px;
+  min-height: 52px;
   padding: 0;
   border-color: #101418;
   border-radius: 12px;
@@ -276,7 +276,7 @@ select {
 
 .touch-pad [data-dir="down"] {
   grid-column: 2;
-  grid-row: 2;
+  grid-row: 3;
 }
 
 .touch-pad [data-dir="right"] {
@@ -405,12 +405,12 @@ select {
   .touch-pad {
     width: 170px;
     height: 170px;
-    grid-template-columns: repeat(3, 50px);
-    grid-template-rows: repeat(3, 50px);
+    grid-template-columns: repeat(3, 46px);
+    grid-template-rows: repeat(3, 46px);
   }
 
   .touch-pad button {
-    width: 50px;
-    min-height: 50px;
+    width: 46px;
+    min-height: 46px;
   }
 }
