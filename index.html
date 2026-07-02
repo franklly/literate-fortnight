@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>&#36138;&#21507;&#34503;</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app" aria-label="&#36138;&#21507;&#34503;&#23567;&#28216;&#25103;">
+    <section class="game-shell">
+      <header class="topbar">
+        <div>
+          <h1>&#36138;&#21507;&#34503;</h1>
+          <p class="status" id="status">&#25353;&#31354;&#26684;&#24320;&#22987;</p>
+        </div>
+        <div class="scoreboard" aria-label="&#28216;&#25103;&#20998;&#25968;">
+          <span>
+            <b id="score">0</b>
+            &#20998;&#25968;
+          </span>
+          <span>
+            <b id="best">0</b>
+            &#26368;&#39640;
+          </span>
+        </div>
+      </header>
+
+      <div class="board-wrap">
+        <canvas id="board" width="560" height="560" aria-label="&#28216;&#25103;&#26827;&#30424;"></canvas>
+        <div class="overlay" id="overlay">
+          <strong>&#20934;&#22791;&#22909;&#20102;&#65311;</strong>
+          <span>&#20808;&#36873;&#36895;&#24230;&#65292;&#28982;&#21518;&#29992;&#26041;&#21521;&#38190; / WASD / &#28369;&#21160;&#25511;&#21046;</span>
+        </div>
+      </div>
+
+      <footer class="controls">
+        <div class="buttons" aria-label="&#28216;&#25103;&#25511;&#21046;">
+          <button type="button" id="startBtn" aria-label="&#24320;&#22987;&#25110;&#26242;&#20572;">
+            <span aria-hidden="true">&gt;</span>
+            &#24320;&#22987;
+          </button>
+          <button type="button" id="restartBtn" aria-label="&#37325;&#26032;&#24320;&#22987;">
+            <span aria-hidden="true">R</span>
+            &#37325;&#24320;
+          </button>
+        </div>
+
+        <label class="speed">
+          &#36895;&#24230;
+          <select id="speed">
+            <option value="210">&#24930;&#36895;</option>
+            <option value="160" selected>&#20013;&#36895;</option>
+            <option value="110">&#39640;&#36895;</option>
+          </select>
+        </label>
+      </footer>
+
+      <nav class="touch-pad" aria-label="&#35302;&#23631;&#26041;&#21521;&#25511;&#21046;">
+        <button type="button" data-dir="up" aria-label="&#21521;&#19978;">&#19978;</button>
+        <button type="button" data-dir="left" aria-label="&#21521;&#24038;">&#24038;</button>
+        <button type="button" data-dir="down" aria-label="&#21521;&#19979;">&#19979;</button>
+        <button type="button" data-dir="right" aria-label="&#21521;&#21491;">&#21491;</button>
+      </nav>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
